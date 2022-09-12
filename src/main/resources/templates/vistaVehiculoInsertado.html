@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="x-ua-compatible">
+	<title>Vehiculos Ingresados</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link href="../css/estilos.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="p-3 mb-2 bg-light text-dark">
+	<table class="table table-info table-hover table-bordered border-info border-3 align-middle">
+
+		<thead>
+			<tr>
+				<th class="text-center">Placa</th>
+				<th class="text-center">Modelo</th>
+				<th class="text-center">Marca</th>
+				<th class="text-center">Año de Fabricacion</th>
+				<th class="text-center">Pais de Fabricacion</th>
+				<th class="text-center">Cilindraje</th>
+				<th class="text-center">Avaluo</th>
+				<th class="text-center">Valor por Dia</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="vehiculo:${vehiculos}">
+				<td class="text-center" th:text="${vehiculo.placa}"></td>
+				<td class="text-center" th:text="${vehiculo.modelo}"></td>
+				<td class="text-center" th:text="${vehiculo.marca}"></td>
+				<td class="text-center" th:text="${vehiculo.anioFabricacion}"></td>
+				<td class="text-center" th:text="${vehiculo.avion.paisFabricacion}"></td>
+				<td class="text-center" th:text="${vehiculo.cilindraje}"></td>
+				<td class="text-center" th:text="${vehiculo.avion.avaluo}"></td>
+				<td class="text-center" th:text="${vehiculo.valorPorDia}"></td>
+			</tr>
+		</tbody>
+	</table>
+
+</body>

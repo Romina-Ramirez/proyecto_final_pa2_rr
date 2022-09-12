@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="x-ua-compatible">
+	<title>Ingreso de Vehiculo</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link href="../css/estilos.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="p-3 mb-2 bg-light text-dark">
+	<form th:action="@{/empleados/vehiculoInsertado}" th:object="${vehiculo}" th:method="POST">
+		<table class="table table-info table-hover table-bordered border-info border-3 align-middle">
+			<tr>
+				<td class="text-center"><label>Placa</label> </td>
+				<td><input class="border border-info border-2" type="text" id="placa" th:field="${vehiculo.placa}"></td>
+			</tr>
+			<tr>
+				<td class="text-center"><label>Modelo</label> </td>
+				<td><input class="border border-info border-2" type="text" id="modelo" th:field="${vehiculo.modelo}">
+				</td>
+			</tr>
+			<tr>
+				<td class="text-center"><label>Marca</label> </td>
+				<td><input class="border border-info border-2" type="text" id="marca" th:field="${vehiculo.marca}"></td>
+			</tr>
+
+			<tr>
+				<td class="text-center"><label>Año de Fabricacion</label> </td>
+				<td><input class="border border-info border-2" type="text" id="añofab"
+						th:field="${vehiculo.anioFabricacion}"></td>
+			</tr>
+			<tr>
+				<td class="text-center"><label>Pais de Fabricacion</label> </td>
+				<td><input class="border border-info border-2" type="text" id="paisfab"
+						th:field="${vehiculo.paisFabricacion}"></td>
+			</tr>
+			<tr>
+				<td class="text-center"><label>Cilindraje</label> </td>
+				<td><input class="border border-info border-2" type="text" id="cili" th:field="${vehiculo.cilindraje}">
+				</td>
+			</tr>
+			<tr>
+				<td class="text-center"><label>Avaluo</label> </td>
+				<td><input class="border border-info border-2" type="text" id="ava" th:field="${vehiculo.avaluo}"></td>
+			</tr>
+			<tr>
+				<td class="text-center"><label>Valor por Dia</label> </td>
+				<td><input class="border border-info border-2" type="text" id="valordia"
+						th:field="${vehiculo.valorPorDia}"></td>
+			</tr>
+			<tr>
+				<td class="text-center"><label>Estado del Vehiculo:</label></td>
+				<td><input class="border border-info border-2" type="text" id="estado" th:field="${vehiculo.estado}">
+				</td>
+			</tr>
+		</table>
+		<div class="d-grid gap-2 col-6 mx-auto">
+			<input type="submit" class="btn btn-outline-info border-3" value="INGRESAR VEHICULO">
+		</div>
+	</form>
+
+</body>
+
+
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Clientes Inicio</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body class="p-3 mb-2 bg-light text-dark">
+	<div class="alert alert-warning alert-dismissable">
+		<strong>Seleccione una opcion:</strong>
+	</div>
+	<label class="text-center">Buscar Vehiculos Disponibles</label>
+	<form th:action="@{/clientes/buscar}" th:method="GET">
+		<div class="d-grid gap-2 col-6 mx-auto">
+			<input class="border border-info border-2" type="submit" value="Buscar">
+		</div>
+	</form>
+	<label class="text-center">Reservar Vehiculo</label>
+	<form th:action="@{/clientes/reservar}" th:method="GET">
+		<div class="d-grid gap-2 col-6 mx-auto">
+			<input class="border border-info border-2" type="submit" value="Reservar">
+		</div>
+	</form>
+
+	<label class="text-center">Registrarse como Cliente</label>
+	<form th:action="@{/clientes/insertarCliente}" th:method="GET">
+		<div class="d-grid gap-2 col-6 mx-auto">
+			<input class="border border-info border-2" type="submit" value="Registrarse">
+		</div>
+	</form>
+
+</body>
+
+</html>
